@@ -1,2 +1,2 @@
 # Qlute
-Rhythm is just *keys* away!
+Rhythm is just * keys * away!
