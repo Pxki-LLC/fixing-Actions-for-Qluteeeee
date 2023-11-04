@@ -1617,5 +1617,5 @@ if __name__  ==  "__main__":
                 sys.exit()
             main()
     except Exception as error:
-        crasha(str(error))
+        crash(str(error))
 
