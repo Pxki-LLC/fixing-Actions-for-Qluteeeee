@@ -99,6 +99,15 @@ else:
     totscore=0
 
 rankmodes=('Ranked',(100,200,100)),('Unranked',(200,100,100)),('In Review',(200,200,100)),('Loading...',(200,200,200)),
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 def test(arg, arg2):
     try:
         arg[arg2]
@@ -219,7 +228,7 @@ pygame.init()
 surface=[]
 for a in range(1,10):
     surface.append(pygame.Surface((0,0)))
-fontname=datapath+'font.ttf'
+fontname=resource_path(datapath+'font.ttf')
 clock=pygame.time.Clock()
 activity=0
 select=False
@@ -1602,7 +1611,7 @@ if __name__  ==  "__main__":
         greph=[]
         for a in modsen:
             greph.append(randint(1,2)-1)
-        programIcon = pygame.image.load(datapath+'icon.png')
+        programIcon = pygame.image.load(resource_path(datapath+'icon.png'))
         while True:
             if stop:
                 sys.exit()
