@@ -2,9 +2,8 @@ name: Build and Package Linux Binary
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
+    paths:
+      - 'main.py'
 
 jobs:
   build:
