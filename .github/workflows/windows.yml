@@ -1,4 +1,4 @@
-name: Build and Package Linux Binary
+name: Build and Package Windows Binary
 
 on:
   push:
