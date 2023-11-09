@@ -17,7 +17,6 @@ gameedition=gameeditions[1]
 gamever='2023.11.09'
 sylphenginever='2023.09.29'
 gameverspl=gamever.split('.')
-#gameminserve=int(gameverspl[0])+((1+float(gameverspl[1]))*float(gameverspl[2]))
 datapath='./data/'
 modpath=datapath+'mods/'
 gamepath=datapath+'beatmaps/'
