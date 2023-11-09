@@ -3,7 +3,7 @@
 #    Just Beats! (Qlute)
 #    2023-2023 Pxki Games
 #    (Using Slyph Engine, Tinyworld's Game Engine)
-# 
+#
 #
 
 import random,re,json,zipfile
