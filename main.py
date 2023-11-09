@@ -51,7 +51,7 @@ for a in paths:
     if not os.path.isdir(a):
         os.mkdir(a)
         print('Created', a.replace('./', ''))
-mtext='Play','Options','ScoreBoard List','Exit'#,'Shop'
+mtext='Play','Options','ScoreBoard List','Exit'
 getpoints=0
 debugmode=True
 fps=0
