@@ -87,9 +87,23 @@ jobs:
             This is automated, Please read the changelog at the main site.
           draft: false
           prerelease: false
-          uses: actions/download-artifact@v3
-          with:
-            upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-            asset_path: ./Windows-Qlute.zip
-            asset_name: Windows-Qlute.zip
-            asset_content_type: application/zip
+      - name: Upload Windows Version
+        id: windowsv
+        uses: actions/download-artifact@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./Windows-Qlute.zip
+          asset_name: Windows-Qlute.zip
+          asset_content_type: application/zip
+      - name: Upload Linux Version
+        id: linuxv 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./Linux-Qlute.zip
+          asset_name: Linux-Qlute.zip
+          asset_content_type: application/zip
