@@ -17,20 +17,20 @@ axe=0
 gamename='Qlute'
 gameeditions='Stable','Beta','Canary','Dev'
 gameedition=gameeditions[1]
-gamever='2023.11.15'
+gamever='2023.12.16'
 sylphenginever='2023.09.29'
 gameverspl=gamever.split('.')
 #gameminserve=int(gameverspl[0])+((1+float(gameverspl[1]))*float(gameverspl[2]))
 modpath=datapath+'mods/'
 gamepath=datapath+'beatmaps/'
 downpath=datapath+'downloads/'
-username='Guest'
+username='BTMC'
 propath=datapath+'profiles/'
 profilepath=propath+username+'/'
 gameupdateurl='https://github.com/pxkidoescoding/Qlute/'
 gameauthor='Pxki Games'
 print('Starting Game...')
-fpsmode=1
+fpsmode=-1
 button_size_height=33
 stop=0
 rankdiff='Easy','Normal','Hard','Extra','Expert','Impossible','WTF!'
@@ -48,7 +48,6 @@ for a in paths:
     if not os.path.isdir(a):
         os.mkdir(a)
         print('Created', a.replace('./', ''))
-mtext='Play','Options','Top Plays','Exit','Shop'
 keyspeed=1
 getpoints=0
 debugmode=True
@@ -163,7 +162,7 @@ def main():
     if time.time()-sa>0.1:
         sa=time.time()
         fps=int(clock.get_fps())
-    allowed=[0,1,2,3,5,6,7,8,99]
+    allowed=[0,1,2,3,5,6,7,8,99,9]
     fullscreenchk()
     size=60
     scale=(w/400)

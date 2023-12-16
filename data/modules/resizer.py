@@ -28,7 +28,7 @@ def fullscreenchk():
     ins=1
     if reload:
         f=24
-        fonts = pygame.font.Font(fontname,  int(f//1.2)),pygame.font.Font(fontname,  f//2),pygame.font.Font(fontname,  f*2),pygame.font.Font(fontname,  int(f//1.5))
+        fonts = pygame.font.Font(fontname,  int(f//1.2)),pygame.font.Font(fontname,  f//2),pygame.font.Font(fontname,  f*2),pygame.font.Font(fontname,  int(f))
         button_size_width=w//2
     tal=25*(w/25)//len(bars)
     scroll=h-60
