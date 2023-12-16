@@ -89,7 +89,6 @@ def menu_draw(instruction, text=None,ishomemenu=False,ignoremove=False, istextbo
                 else:
                     buttcolour=mainmenucolor[1][0]-(10*(a-2)),mainmenucolor[1][1]-(10*(a-2)),mainmenucolor[1][2]-(10*(a-2))
                 if ishomemenu:
-                    print(a)
                     if not ignoremove:
                         if button==a and not int(menupos[a-1])>19:
                             menupos[a-1]+=100*drawtime
