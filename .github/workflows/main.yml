@@ -61,7 +61,7 @@ jobs:
     name: Create Game Release
     runs-on: ubuntu-latest
     needs: [linux-build, windows-build]
-    if: ${{ needs.windows-build.result == 'success' && needs.windows-build.result == 'success' }}
+    if: ${{ needs.windows-build.result == 'success' && needs.linux-build.result == 'success' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
