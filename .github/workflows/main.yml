@@ -27,7 +27,7 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --onefile --name lqlute-beta --add-data "data:data" main.py
+        pyinstaller --onefile --name lqlute-beta --add-data "data:data" launcher.py
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
