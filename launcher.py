@@ -68,7 +68,7 @@ for a in os.listdir(resource_path(modulepath)):
         #print('File:'+str(a)+' is Not Verified, Skipping')
         exit()
 moduletime=time.time()-moduletime
-if os.path.isfile(modulepath+'bootstrap.py'):
+if os.path.isfile(resource_path(modulepath+'bootstrap.py')):
     exec(open(resource_path(modulepath+'bootstrap.py')).read())
 else:
     print('Bootstrap not Found')
