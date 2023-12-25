@@ -3,7 +3,8 @@ name: Build and Package Binary
 on:
   push:
     paths:
-      - 'main.py'
+      - 'launcher.py'
+      - 'data/'
       - '.github/workflows/main.yml'
 
 jobs:
